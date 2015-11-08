@@ -1,4 +1,21 @@
 class Stack
-	# additionally, you will need to create a 'stack_display' function that will simply return the @data_store variable for the tests to pass, because one of the test cases utilizes this function to validate the @data_store array.
+	attr_accessor :data_store
+	attr_reader :back
 
+	def initialize
+		@data_store = []
+		@back = 0
+	end
+
+	def stack_display
+		@data_store
+	end
+
+	def push(element)
+		@data_store.push(element)
+	end
+
+	def pop
+		@data_store.pop
+	end
 end
